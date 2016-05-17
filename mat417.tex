@@ -1,0 +1,59 @@
+\documentclass{book}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{latexsym}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{arydshln}
+\usepackage{dsfont}
+\usepackage{enumitem}
+\usepackage{todonotes}
+
+\usepackage{minitoc}
+
+\usepackage{xcolor}
+
+\newtheoremstyle{own}%
+    {3pt}% Space above
+    {3pt}% Space below
+    {}% Body font
+    {}% Indent amount
+    {\color{blue}\bfseries}% Theorem head font
+    {:}% Punctuation after theorem head
+    {\newline}% Space after theorem head
+    {}% Theorem head spec
+
+\theoremstyle{own}
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remarque}
+
+\newtheorem{prop}{Proposition}[section]
+
+\newtheorem{theorem}{Theorem}[section]
+
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\begin{document}
+
+\frontmatter
+\dominitoc
+\tableofcontents
+
+\todo{Retravailler les commande remarque et definition}\\
+
+\mainmatter
+\include{chap1/chap1}
+%\include{chap2/chap2}
+%\include{chap3/chap3}
+
+\backmatter
+	
+\end{document}
